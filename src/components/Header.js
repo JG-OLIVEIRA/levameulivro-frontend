@@ -35,7 +35,19 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className={styles.headerBottom}></div>
+      <div className={styles.headerBottom}>
+        <button>Entre / Registrar-se</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">HOME</a>
+            </li>
+            <li>
+              <a href="">COMO FUNCIONA</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 }
