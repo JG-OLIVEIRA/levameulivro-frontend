@@ -1,0 +1,86 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 10px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: stretch;
+}
+
+.searchContainer input {
+  background-color: #f6f6f6;
+  width: 25rem;
+  height: 2.5rem;
+  border-radius: 9px 0px 0px 9px;
+  border-color: #37e9fa;
+  color: #31a1de;
+}
+
+input::placeholder {
+  color: #3146de;
+  text-align: center;
+}
+
+.searchContainer button {
+  background-color: #ffffff;
+  width: 2.5rem;
+  border-radius: 0px 9px 9px 0px;
+  border-color: #feee08;
+}
+
+.searchContainer button img {
+  width: 1.5rem;
+}
+
+.userSessionContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.userSession {
+  display: flex;
+  flex-direction: column;
+}
+
+.userSessionButtonsContainer {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userSessionButton {
+  border-color: #f61f0e;
+  background: linear-gradient(to bottom, #fca8a1 5%, #f61f0e 100%);
+  box-shadow: inset 0px 1px 0px 0px #fff4f3;
+  color: #fff;
+  text-shadow: 0px 1px 0px #528009;
+}
+
+.userSessionButton:hover {
+  background: linear-gradient(to bottom, #f61f0e 5%, #fca8a1 100%);
+}
+
+span {
+  color: #eb4335;
+}
+
+.userSessionButton:active {
+  position: relative;
+  top: 2px;
+}
+
+.headerBottom {
+  height: 3rem;
+  background: #4285f4;
+}
