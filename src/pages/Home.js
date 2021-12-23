@@ -13,7 +13,7 @@ function Home() {
             <a href="#carousel__slide4" className={styles.carouselPrev}>
               Go to last slide
             </a>
-            <img src={capa1} className="capa1" />
+            <img src={capa1} alt="imagem 1" className="capa1" />
             <a href="#carousel__slide2" className={styles.carouselNext}>
               Go to next slide
             </a>
@@ -24,7 +24,7 @@ function Home() {
           <a href="#carousel__slide1" className={styles.carouselPrev}>
             Go to previous slide
           </a>
-          <img src={capa2} className="capa2" />
+          <img src={capa2} alt="imagem 2" className="capa2" />
           <a href="#carousel__slide3" className={styles.carouselNext}>
             Go to next slide
           </a>
@@ -34,7 +34,7 @@ function Home() {
           <a href="#carousel__slide2" className={styles.carouselPrev}>
             Go to previous slide
           </a>
-          <img src={capa3} className="capa3" />
+          <img src={capa3} alt="imagem 3" className="capa3" />
           <a href="#carousel__slide4" className={styles.carouselNext}>
             Go to next slide
           </a>
@@ -44,7 +44,7 @@ function Home() {
           <a href="#carousel__slide3" className={styles.carouselPrev}>
             Go to previous slide
           </a>
-          <img src={capa4} className="capa4" />
+          <img src={capa4} alt="imagem 4" className="capa4" />
           <a href="#carousel__slide1" className={styles.carouselNext}>
             Go to first slide
           </a>

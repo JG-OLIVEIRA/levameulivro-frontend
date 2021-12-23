@@ -8,7 +8,7 @@ function Header() {
     <div className={styles.headerContainer}>
       <div className={styles.headerTop}>
         <div>
-          <img src={logo} />
+          <img src={logo} alt="logo" />
         </div>
 
         <div className={styles.searchContainer}>
@@ -17,7 +17,7 @@ function Header() {
             placeholder="Busque por seu livro, autor ou ISBN"
           />
           <button>
-            <img src={searchButton} />
+            <img src={searchButton} alt="imagem do botão" />
           </button>
         </div>
 
@@ -31,7 +31,7 @@ function Header() {
             </div>
           </div>
           <div>
-            <img src={loginImage} />
+            <img src={loginImage} alt="imagem de perfil" />
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ function Header() {
               <a href="/">HOME</a>
             </li>
             <li>
-              <a href="">COMO FUNCIONA</a>
+              <a href="/comofunciona">COMO FUNCIONA</a>
             </li>
           </ul>
         </nav>
