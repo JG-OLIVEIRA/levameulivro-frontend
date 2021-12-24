@@ -71,7 +71,7 @@ input::placeholder {
   background: linear-gradient(to bottom, #f61f0e 5%, #fca8a1 100%);
 }
 
-span {
+.userSession span {
   color: #eb4335;
 }
 
@@ -96,13 +96,13 @@ nav {
   width: 25rem;
 }
 
-ul {
+.headerBottom ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-ul {
+.headerBottom ul {
   display: flex;
   font-family: sans-serif;
   color: #4285f4;
@@ -121,7 +121,7 @@ a {
 
 @media screen and (max-width: 725px) {
   .userSessionContainer img,
-  span,
+  .userSession span,
   .userSessionButton {
     display: none;
   }

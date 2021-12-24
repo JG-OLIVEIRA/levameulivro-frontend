@@ -1,0 +1,69 @@
+.bookCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 10px;
+}
+
+.bookCardContainer img {
+  width: 50%;
+  height: 50%;
+  margin: 5px;
+}
+
+.nameContainer p {
+  font-weight: 700;
+  margin: 5px;
+}
+
+.buttonsContainer {
+  width: 50%;
+}
+
+.buttonsContainer span {
+  width: auto;
+  color: #ffffff;
+}
+
+.buttonOne,
+.buttonTwo {
+  font-size: 60%;
+  width: 50%;
+  height: 46px;
+  border-radius: 10px;
+}
+.buttonOne {
+  background-color: #eb4335;
+}
+
+.buttonTwo {
+  background-color: #34a853;
+}
+
+@media screen and (max-width: 1060px) {
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttonOne,
+  .buttonTwo {
+    width: 100%;
+    height: 30px;
+    font-size: 100%;
+  }
+
+  .nameContainer {
+    width: 50%;
+  }
+
+  .nameContainer p {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .buttonsContainer span {
+    font-size: 15px;
+    color: #ffffff;
+  }
+}

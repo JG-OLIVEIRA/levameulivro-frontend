@@ -116,13 +116,13 @@ li {
   scroll-snap-align: center;
 }
 @media (hover: hover) {
-  .carousel__snapper {
+  .carouselSnapper {
     animation-name: tonext, snap;
     animation-timing-function: ease;
     animation-duration: 4s;
     animation-iteration-count: infinite;
   }
-  .carouselSlide:last-child .carousel__snapper {
+  .carouselSlide:last-child .carouselSnapper {
     animation-name: tostart, snap;
   }
 }
@@ -210,4 +210,18 @@ li {
 
 .carouselContainer li img {
   width: 100%;
+}
+
+.avaliableBooks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .avaliableBooks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
