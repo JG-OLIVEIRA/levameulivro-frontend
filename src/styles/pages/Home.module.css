@@ -219,9 +219,61 @@ li {
   margin-bottom: 20px;
 }
 
+.cardsContainer {
+  display: flex;
+  height: 100px;
+}
+
+.card1Container,
+.card2Container,
+.card3Container,
+.card4Container {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card1Container {
+  background: #eb4335;
+}
+
+.card2Container {
+  background: #fcbc05;
+}
+
+.card3Container {
+  background: #34a853;
+}
+
+.card4Container {
+  background: #31a1de;
+}
+
+.img1,
+.img2,
+.img3,
+.img4 {
+  background: #ffffffff;
+  border-radius: 50px;
+}
+
+.cardsContainer p {
+  width: 200px;
+}
+
 @media screen and (max-width: 800px) {
   .avaliableBooks {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .cardsContainer {
+    display: none;
+  }
+
+  .cardsContainer p {
+    width: 200px;
+    font-size: x-small;
   }
 }

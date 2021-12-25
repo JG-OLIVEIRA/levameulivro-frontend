@@ -3,6 +3,10 @@ import capa1 from "../assets/capa1.png";
 import capa2 from "../assets/capa2.png";
 import capa3 from "../assets/capa3.png";
 import capa4 from "../assets/capa4.png";
+import img1 from "../assets/img1.svg";
+import img2 from "../assets/img2.svg";
+import img3 from "../assets/img3.svg";
+import img4 from "../assets/img4.svg";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import getAllBooks from "../services/getAllBooks";
@@ -11,10 +15,14 @@ import BookCard from "../components/BookCard";
 function Home() {
   const [books, setBooks] = useState([]);
 
-  useEffect(async () => {
+  async function showBooksInPage() {
     const { books } = await getAllBooks();
 
     setBooks(books);
+  }
+
+  useEffect(() => {
+    showBooksInPage();
   }, []);
 
   return (
@@ -115,6 +123,31 @@ function Home() {
             </li>
           </ol>
         </aside>
+      </section>
+      <section className={styles.cardsContainer}>
+        <div className={styles.card1Container}>
+          <img className={styles.img1} src={img1} alt="" />
+          <p>
+            Encontre livros acadêmicos e troque com alguém sem utilizar
+            dinheiro!
+          </p>
+        </div>
+        <div className={styles.card2Container}>
+          <img className={styles.img2} src={img2} alt="" />
+          <p>
+            É de graça se você trocar com alguém, ou compre a um preço módico.
+          </p>
+        </div>
+        <div className={styles.card3Container}>
+          <img className={styles.img3} src={img3} alt="" />
+          <p>Cada livro cadastrado e enviado à alguém você recebe 1 ponto.</p>
+        </div>
+        <div className={styles.card4Container}>
+          <img className={styles.img4} src={img4} alt="" />
+          <p>
+            Navegue no site e utilize seus pontos para trocar por outro livro.
+          </p>
+        </div>
       </section>
       <Navbar />
       <ul className={styles.avaliableBooks}>

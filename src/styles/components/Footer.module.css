@@ -44,3 +44,7 @@ strong {
   text-align: start;
   margin: 10px 10px;
 }
+
+.about p {
+  font-weight: 400;
+}
