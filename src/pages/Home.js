@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styles from "../styles/pages/Home.module.css";
 import capa1 from "../assets/capa1.png";
 import capa2 from "../assets/capa2.png";
@@ -7,16 +8,15 @@ import img1 from "../assets/img1.svg";
 import img2 from "../assets/img2.svg";
 import img3 from "../assets/img3.svg";
 import img4 from "../assets/img4.svg";
-import Navbar from "../components/Navbar";
-import { useEffect, useState } from "react";
-import getAllBooks from "../services/getAllBooks";
+import getBooks from "../services/getBooks";
 import BookCard from "../components/BookCard";
+import InformativeRectangle from "../components/InformativeRectangle";
 
 function Home() {
   const [books, setBooks] = useState([]);
 
   async function showBooksInPage() {
-    const { books } = await getAllBooks();
+    const { books } = await getBooks(1, 4);
 
     setBooks(books);
   }
@@ -149,7 +149,7 @@ function Home() {
           </p>
         </div>
       </section>
-      <Navbar />
+      <InformativeRectangle />
       <ul className={styles.avaliableBooks}>
         {books.map((book) => (
           <li>
