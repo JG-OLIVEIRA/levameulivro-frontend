@@ -1,6 +1,11 @@
 import styles from "../styles/pages/UserSignUpAndSignIn.module.css";
-import { useState } from "react";
 import api from "../services/api";
+
+import { useState } from "react";
+
+import withReactContent from "sweetalert2-react-content";
+import Swal from "sweetalert2";
+import { login } from "../services/auth";
 
 function UserSignUpAndSignIn() {
   const [firstName, setFirstName] = useState("");
@@ -14,24 +19,91 @@ function UserSignUpAndSignIn() {
   const [signInEmail, setSignInEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
 
+  const MySwal = withReactContent(Swal);
+
   async function signUp(event) {
     event.preventDefault();
-    await api.post("/users/signup", {
-      firstName,
-      lastName,
-      email,
-      password,
-      birthDate,
-      zipCode,
-    });
+
+    if (password !== confirmedPassword) {
+      MySwal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "As senhas não são iguais!",
+        footer: '<a href="">Why do I have this issue?</a>',
+      });
+    }
+
+    try {
+      const { data } = await api.post("/users/signup", {
+        firstName,
+        lastName,
+        email,
+        password,
+        birthDate,
+        zipCode,
+      });
+
+      MySwal.fire({
+        icon: "success",
+        title: '<span style="font-family: sans-serif;"> Aí sim! </span>',
+        text: data.messege,
+        backdrop: "rgba(66, 133, 244, 0.45)",
+      });
+
+      login(data);
+    } catch (error) {
+      const { status } = error.response;
+
+      if (status === 401) {
+        MySwal.fire({
+          icon: "error",
+          title:
+            '<span style="font-family: sans-serif;"> Ops, deu ruim... </span>',
+          text: error.response.data.messege,
+          backdrop: "rgba(66, 133, 244, 0.45)",
+        });
+      } else if (status === 400) {
+        MySwal.fire({
+          icon: "error",
+          title:
+            '<span style="font-family: sans-serif;"> Ops, deu ruim... </span>',
+          text: error.response.data.errors[0].msg,
+          backdrop: "rgba(66, 133, 244, 0.45)",
+        });
+      }
+    }
   }
 
   async function signIn(event) {
     event.preventDefault();
-    await api.post("/users/signin", {
-      email: signInEmail,
-      password: signInPassword,
-    });
+
+    try {
+      const { data } = await api.post("/users/signin", {
+        email: signInEmail,
+        password: signInPassword,
+      });
+
+      MySwal.fire({
+        icon: "success",
+        title: '<span style="font-family: sans-serif;"> Aí sim! </span>',
+        text: data.messege,
+        backdrop: "rgba(66, 133, 244, 0.45)",
+      });
+
+      login(data);
+    } catch (error) {
+      const { status } = error.response;
+
+      if (status === 401) {
+        MySwal.fire({
+          icon: "error",
+          title:
+            '<span style="font-family: sans-serif;"> Ops, deu ruim... </span>',
+          text: error.response.data.error,
+          backdrop: "rgba(66, 133, 244, 0.45)",
+        });
+      }
+    }
   }
 
   return (

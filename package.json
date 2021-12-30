@@ -10,7 +10,6 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
-    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.3.1",
     "sweetalert2-react-content": "^4.2.0"
   },
