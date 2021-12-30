@@ -152,7 +152,7 @@ function Home() {
       <InformativeRectangle />
       <ul className={styles.avaliableBooks}>
         {books.map((book) => (
-          <li>
+          <li key={book.id}>
             <BookCard
               id={book.id}
               name={book.name}

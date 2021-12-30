@@ -1,0 +1,76 @@
+.userSignUpAndSignInContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userSignUpAndSignInContainer h2 {
+  color: #4285f4;
+  margin: 35px;
+}
+
+.formContainer {
+  display: flex;
+}
+
+.formContainer .userForm:first-child h1 {
+  color: #34a853;
+}
+
+.formContainer .userForm h1 {
+  color: #eb4335;
+}
+
+.buttonSignUp {
+  background: #34a853;
+}
+
+.buttonSignIn {
+  background: #eb4335;
+}
+
+.buttonSignIn,
+.buttonSignUp {
+  width: 216px;
+  height: 46px;
+  border: 0;
+  border-radius: 10px;
+  color: #ffffffff;
+  margin: 10px;
+}
+
+.userForm {
+  display: flex;
+  margin: 0 100px 100px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userForm div {
+  width: 100%;
+}
+
+.userForm input {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  background: #e0e0e0;
+}
+
+.userForm p {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.userForm input::placeholder {
+  color: #4f4f4f;
+}
+
+@media screen and (max-width: 1050px) {
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}

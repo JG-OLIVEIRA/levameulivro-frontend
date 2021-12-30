@@ -2,8 +2,15 @@ import styles from "../styles/components/Header.module.css";
 import searchButton from "../assets/search.svg";
 import loginImage from "../assets/login.svg";
 import logo from "../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
+  function navigateToSignUpAndSignIn() {
+    navigate("signup-signin");
+  }
+
   return (
     <div className={styles.headerContainer}>
       <div className={styles.headerTop}>
@@ -20,12 +27,14 @@ function Header() {
             <img src={searchButton} alt="imagem do botão" />
           </button>
         </div>
-
         <div className={styles.userSessionContainer}>
           <div className={styles.userSession}>
             <span>Oi, seja bem vindx!</span>
             <div className={styles.userSessionButtonsContainer}>
-              <button className={styles.userSessionButton}>
+              <button
+                onClick={() => navigateToSignUpAndSignIn()}
+                className={styles.userSessionButton}
+              >
                 Entre / Registrar-se
               </button>
             </div>
@@ -36,7 +45,9 @@ function Header() {
         </div>
       </div>
       <div className={styles.headerBottom}>
-        <button>Entre / Registrar-se</button>
+        <button onClick={() => navigateToSignUpAndSignIn()}>
+          Entre / Registrar-se
+        </button>
         <nav>
           <ul>
             <li>
