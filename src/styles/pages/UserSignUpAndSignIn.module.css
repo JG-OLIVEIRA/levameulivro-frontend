@@ -4,11 +4,6 @@
   align-items: center;
 }
 
-.userSignUpAndSignInContainer h2 {
-  color: #4285f4;
-  margin: 35px;
-}
-
 .formContainer {
   display: flex;
 }

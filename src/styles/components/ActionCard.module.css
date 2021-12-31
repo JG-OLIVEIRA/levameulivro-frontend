@@ -1,0 +1,28 @@
+.actionCardContainer {
+  width: 268px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px;
+}
+
+.actionCardContainer h2 {
+  margin: 22px;
+}
+
+.paragrafyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 13px;
+}
+
+.paragrafyContainer p {
+  text-align: justify;
+}
+
+.actionCardContainer button {
+  width: 100%;
+  height: 46px;
+  border-radius: 10px;
+}

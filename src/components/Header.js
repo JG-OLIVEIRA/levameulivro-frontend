@@ -15,7 +15,9 @@ function Header() {
     <div className={styles.headerContainer}>
       <div className={styles.headerTop}>
         <div>
-          <img src={logo} alt="logo" />
+          <a href="/">
+            <img src={logo} alt="logo" />
+          </a>
         </div>
 
         <div className={styles.searchContainer}>

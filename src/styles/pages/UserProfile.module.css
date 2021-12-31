@@ -1,0 +1,21 @@
+.userProfileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actionsCardContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .actionsCardContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
