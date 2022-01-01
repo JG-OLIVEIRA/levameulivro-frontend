@@ -7,7 +7,7 @@ import imgBooks from "../assets/imgLivros.svg";
 import imgExchanges from "../assets/imgTroca.svg";
 import { useNavigate } from "react-router-dom";
 
-function UserProfile() {
+export default function UserProfile() {
   const navigate = useNavigate();
 
   function navigateToMyData() {
@@ -27,7 +27,7 @@ function UserProfile() {
   }
 
   return (
-    <section className={styles.userProfileContainer}>
+    <main className={styles.userProfileContainer}>
       <h2>Aeee! Seja Bem-Vindx ao Nosso Clube!</h2>
       <div className={styles.actionsCardContainer}>
         <ActionCard
@@ -67,8 +67,6 @@ function UserProfile() {
           backgroundColor="#FCBC05"
         />
       </div>
-    </section>
+    </main>
   );
 }
-
-export default UserProfile;

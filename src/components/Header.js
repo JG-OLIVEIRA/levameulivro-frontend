@@ -4,7 +4,7 @@ import loginImage from "../assets/login.svg";
 import logo from "../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
 
-function Header() {
+export default function Header() {
   const navigate = useNavigate();
 
   function navigateToSignUpAndSignIn() {
@@ -64,5 +64,3 @@ function Header() {
     </div>
   );
 }
-
-export default Header;

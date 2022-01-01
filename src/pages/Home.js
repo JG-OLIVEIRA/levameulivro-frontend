@@ -12,7 +12,7 @@ import getBooks from "../services/getBooks";
 import BookCard from "../components/BookCard";
 import InformativeRectangle from "../components/InformativeRectangle";
 
-function Home() {
+export default function Home() {
   const [books, setBooks] = useState([]);
 
   async function showBooksInPage() {
@@ -26,7 +26,7 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <main>
       <section className={styles.carouselContainer} aria-label="Gallery">
         <ol className={styles.carouselViewport}>
           <li
@@ -161,8 +161,6 @@ function Home() {
           </li>
         ))}
       </ul>
-    </>
+    </main>
   );
 }
-
-export default Home;

@@ -7,7 +7,7 @@ import withReactContent from "sweetalert2-react-content";
 import Swal from "sweetalert2";
 import { login } from "../services/auth";
 
-function UserSignUpAndSignIn() {
+export default function UserSignUpAndSignIn() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -225,5 +225,3 @@ function UserSignUpAndSignIn() {
     </main>
   );
 }
-
-export default UserSignUpAndSignIn;

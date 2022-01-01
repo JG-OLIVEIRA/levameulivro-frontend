@@ -1,6 +1,6 @@
 import styles from "../styles/components/ActionCard.module.css";
 
-function ActionCard(props) {
+export default function ActionCard(props) {
   return (
     <div className={styles.actionCardContainer}>
       <div className={styles.actionImageContainer}>
@@ -19,5 +19,3 @@ function ActionCard(props) {
     </div>
   );
 }
-
-export default ActionCard;

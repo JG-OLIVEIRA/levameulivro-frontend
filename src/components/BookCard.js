@@ -1,6 +1,6 @@
 import styles from "../styles/components/BookCard.module.css";
 
-function BookCard(props) {
+export default function BookCard(props) {
   return (
     <div className={styles.bookCardContainer}>
       <img src={props.thumbnailURL} alt="imagem do livro" />
@@ -18,5 +18,3 @@ function BookCard(props) {
     </div>
   );
 }
-
-export default BookCard;
