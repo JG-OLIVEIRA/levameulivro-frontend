@@ -5,6 +5,7 @@
 
 .bookInformationContainer img {
   width: 250px;
+  border: 5px solid #4285f4;
 }
 
 .bookMainInformationContainer {
@@ -18,7 +19,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 86px;
-  margin-bottom: 82px;
 }
 
 .bookMainInformationContainer button {
@@ -26,6 +26,7 @@
   height: 46px;
   border-radius: 10px;
   background-color: #eb4335;
+  margin: 25px;
 }
 
 .bookDescriptionContainer {
@@ -51,11 +52,26 @@
   margin: 42px 143px;
 }
 
-@media screen and (max-width: 800px) {
+.adressInformationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 865px) {
+  .bookInformationContainer {
+    display: flex;
+    margin: 80px 100px 0 100px;
+  }
+
   .bookInformationContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .bookMainInformationContainer div {
+    margin-top: 5px;
   }
 
   .bookMainInformationContainer {
@@ -63,11 +79,12 @@
   }
 
   .bookMainInformationContainer h1 {
+    font-size: 15px;
     margin: 10px;
   }
 
   .bookInformationContainer img {
-    width: 150px;
+    width: 225px;
   }
 
   .bookDescriptionContainer p {

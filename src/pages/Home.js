@@ -11,14 +11,21 @@ import img4 from "../assets/img4.svg";
 import getBooks from "../services/getBooks";
 import BookCard from "../components/BookCard";
 import InformativeRectangle from "../components/InformativeRectangle";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [books, setBooks] = useState([]);
+
+  const navigate = useNavigate();
 
   async function showBooksInPage() {
     const { books } = await getBooks(1, 4);
 
     setBooks(books);
+  }
+
+  function navigateToBook(id) {
+    navigate(`/books/${id}`);
   }
 
   useEffect(() => {
@@ -157,6 +164,7 @@ export default function Home() {
               id={book.id}
               name={book.name}
               thumbnailURL={book.thumbnail_url}
+              navigateFunction={() => navigateToBook(book.id)}
             />
           </li>
         ))}

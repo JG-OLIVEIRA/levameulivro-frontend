@@ -11,7 +11,7 @@ export default function BookCard(props) {
         <button className={styles.buttonOne}>
           <span>QUERO</span>
         </button>
-        <button className={styles.buttonTwo}>
+        <button onClick={props.navigateFunction} className={styles.buttonTwo}>
           <span>+DETALHES</span>
         </button>
       </div>
