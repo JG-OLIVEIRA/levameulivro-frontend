@@ -6,6 +6,7 @@ import { useState } from "react";
 import withReactContent from "sweetalert2-react-content";
 import Swal from "sweetalert2";
 import { login } from "../services/auth";
+import { useNavigate } from "react-router-dom";
 
 export default function UserSignUpAndSignIn() {
   const [firstName, setFirstName] = useState("");
@@ -18,6 +19,8 @@ export default function UserSignUpAndSignIn() {
 
   const [signInEmail, setSignInEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const MySwal = withReactContent(Swal);
 
@@ -51,6 +54,7 @@ export default function UserSignUpAndSignIn() {
       });
 
       login(data);
+      navigate("/my-profile");
     } catch (error) {
       const { status } = error.response;
 
@@ -91,8 +95,19 @@ export default function UserSignUpAndSignIn() {
       });
 
       login(data);
+      navigate("/my-profile");
     } catch (error) {
       const { status } = error.response;
+
+      if (status === 400) {
+        MySwal.fire({
+          icon: "error",
+          title:
+            '<span style="font-family: sans-serif;"> Ops, deu ruim... </span>',
+          text: error.response.data.errors[0].msg,
+          backdrop: "rgba(66, 133, 244, 0.45)",
+        });
+      }
 
       if (status === 401) {
         MySwal.fire({

@@ -3,6 +3,7 @@ import searchButton from "../assets/search.svg";
 import loginImage from "../assets/login.svg";
 import logo from "../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
+import { isAuthenticated, logout } from "../services/auth";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -10,6 +11,13 @@ export default function Header() {
   function navigateToSignUpAndSignIn() {
     navigate("signup-signin");
   }
+
+  function logoutAndNavigateToSignAndSignIn() {
+    logout();
+    navigate("signup-signin");
+  }
+
+  console.log(isAuthenticated());
 
   return (
     <div className={styles.headerContainer}>
@@ -33,12 +41,21 @@ export default function Header() {
           <div className={styles.userSession}>
             <span>Oi, seja bem vindx!</span>
             <div className={styles.userSessionButtonsContainer}>
-              <button
-                onClick={() => navigateToSignUpAndSignIn()}
-                className={styles.userSessionButton}
-              >
-                Entre / Registrar-se
-              </button>
+              {isAuthenticated() ? (
+                <button
+                  onClick={() => logoutAndNavigateToSignAndSignIn()}
+                  className={styles.userSessionButton}
+                >
+                  Sair
+                </button>
+              ) : (
+                <button
+                  onClick={() => navigateToSignUpAndSignIn()}
+                  className={styles.userSessionButton}
+                >
+                  Entre / Registrar-se
+                </button>
+              )}
             </div>
           </div>
           <div>
@@ -47,9 +64,15 @@ export default function Header() {
         </div>
       </div>
       <div className={styles.headerBottom}>
-        <button onClick={() => navigateToSignUpAndSignIn()}>
-          Entre / Registrar-se
-        </button>
+        {isAuthenticated() ? (
+          <button onClick={() => logoutAndNavigateToSignAndSignIn()}>
+            Sair
+          </button>
+        ) : (
+          <button onClick={() => navigateToSignUpAndSignIn()}>
+            Entre / Registrar-se
+          </button>
+        )}
         <nav>
           <ul>
             <li>
