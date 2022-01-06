@@ -17,8 +17,6 @@ export default function Header() {
     navigate("signup-signin");
   }
 
-  console.log(isAuthenticated());
-
   return (
     <div className={styles.headerContainer}>
       <div className={styles.headerTop}>
@@ -59,7 +57,9 @@ export default function Header() {
             </div>
           </div>
           <div>
-            <img src={loginImage} alt="imagem de perfil" />
+            <a href="/my-profile">
+              <img src={loginImage} alt="imagem de perfil" />
+            </a>
           </div>
         </div>
       </div>

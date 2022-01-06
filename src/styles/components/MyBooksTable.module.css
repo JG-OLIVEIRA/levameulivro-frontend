@@ -1,0 +1,55 @@
+.table {
+  margin: 10px;
+}
+
+.table img {
+  width: 52px;
+  height: 77px;
+  margin: 3px;
+}
+
+thead {
+  background-color: #4285f4;
+}
+
+tbody {
+  background-color: #f6f6f6;
+}
+
+td {
+  text-align: center;
+  border: 1px solid #4285f4;
+}
+
+td:first-child {
+  display: flex;
+  justify-content: center;
+}
+
+.actionsButtonsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.actionsButtonsContainer span {
+  color: #000000;
+}
+
+.actionsButtonsContainer button {
+  width: 30%;
+
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.actionsButtonsContainer button img {
+  width: 37px;
+  height: 37px;
+}
+
+@media screen and (max-width: 1200px) {
+  .actionsButtonsContainer button {
+    width: 50%;
+  }
+}

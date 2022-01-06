@@ -1,4 +1,5 @@
 import styles from "../styles/pages/UserSignUpAndSignIn.module.css";
+import WelcomeMessege from "../components/WelcomeMessege";
 import api from "../services/api";
 
 import { useState } from "react";
@@ -89,8 +90,8 @@ export default function UserSignUpAndSignIn() {
 
       MySwal.fire({
         icon: "success",
-        title: '<span style="font-family: sans-serif;"> Aí sim! </span>',
-        text: data.messege,
+        title:
+          '<span style="font-family: sans-serif;"> Seja bem vindx de volta! </span>',
         backdrop: "rgba(66, 133, 244, 0.45)",
       });
 
@@ -123,7 +124,7 @@ export default function UserSignUpAndSignIn() {
 
   return (
     <main className={styles.userSignUpAndSignInContainer}>
-      <h2>Pronto para entrar no time? Então...</h2>
+      <WelcomeMessege messege="Pronto para entrar no time? Então..." />
       <div className={styles.formContainer}>
         <form onSubmit={(event) => signUp(event)} className={styles.userForm}>
           <h1>Crie Sua Conta</h1>

@@ -5,6 +5,7 @@ import UserSignUpAndSignIn from "./pages/UserSignUpAndSignIn";
 import Home from "./pages/Home";
 import UserProfile from "./pages/UserProfile";
 import BookDetails from "./pages/BookDetails";
+import MyBooks from "./pages/MyBooks";
 
 function AppRouter() {
   return (
@@ -13,6 +14,7 @@ function AppRouter() {
       <Route path="/signup-signin" element={<UserSignUpAndSignIn />} />
       <Route path="/my-profile" element={<UserProfile />} />
       <Route path="/books/:id" element={<BookDetails />} />
+      <Route path="/my-books" element={<MyBooks />} />
     </Routes>
   );
 }

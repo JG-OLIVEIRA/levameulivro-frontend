@@ -1,0 +1,32 @@
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px;
+}
+
+.paginationContainer span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f6f6;
+}
+
+.paginationContainer span,
+.paginationContainer button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #4285f4;
+}
+
+.paginationContainer button {
+  background-color: #ffffff;
+}
+
+.paginationContainer button:disabled {
+  background-color: #f6f6f6c2;
+}
+
+.color {
+  color: #4285f4;
+}

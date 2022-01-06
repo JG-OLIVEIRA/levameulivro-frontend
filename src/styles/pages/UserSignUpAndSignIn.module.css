@@ -8,6 +8,15 @@
   display: flex;
 }
 
+.formContainer input {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  background: #e0e0e0;
+}
+
 .formContainer .userForm:first-child h1 {
   color: #34a853;
 }
@@ -45,22 +54,9 @@
   width: 100%;
 }
 
-.userForm input {
-  width: 100%;
-  height: 40px;
-  border: 0;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
-  background: #e0e0e0;
-}
-
 .userForm p {
   font-weight: bold;
   margin-bottom: 2rem;
-}
-
-.userForm input::placeholder {
-  color: #4f4f4f;
 }
 
 @media screen and (max-width: 1050px) {

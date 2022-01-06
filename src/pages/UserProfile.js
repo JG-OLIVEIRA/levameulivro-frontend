@@ -6,6 +6,7 @@ import imgCredit from "../assets/imgSaldo.svg";
 import imgBooks from "../assets/imgLivros.svg";
 import imgExchanges from "../assets/imgTroca.svg";
 import { useNavigate } from "react-router-dom";
+import WelcomeMessege from "../components/WelcomeMessege";
 
 export default function UserProfile() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export default function UserProfile() {
 
   return (
     <main className={styles.userProfileContainer}>
-      <h2>Aeee! Seja Bem-Vindx ao Nosso Clube!</h2>
+      <WelcomeMessege messege="Aeee! Seja Bem-Vindx ao Nosso Clube!" />
       <div className={styles.actionsCardContainer}>
         <ActionCard
           actionImage={imgMyData}
@@ -52,7 +53,7 @@ export default function UserProfile() {
           actionImage={imgBooks}
           actionAlternativeText="imagem meus livros"
           actionTitle="Meus Livros"
-          paragrafy="Cadastre os livros que está disposto a trocar para receber créditos. Responda dúvidas de outros usuários."
+          paragrafy="Cadastre os livros que está disposto a trocar para receber créditos."
           actionFunction={navigateToMyBooks}
           titleColor="#4285F4"
           backgroundColor="#4285F4"

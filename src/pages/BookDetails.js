@@ -58,16 +58,12 @@ export default function BookDetails() {
         <div className={styles.bookMainInformationContainer}>
           <h1>{name}</h1>
           <div>
-            <b>Autor:</b>
-            <p>{author}</p>
-            <b>ISBN:</b>
-            <p>{isbn}</p>
-            <b>Dono:</b>
-            <p>
-              {firstName} {lastName}
-            </p>
-            <b>CEP:</b>
-            <p>{zipCode}</p>
+            <b>Autor: {author}</b>
+            <b>ISBN: {isbn}</b>
+            <b>
+              Dono: {firstName} {lastName}
+            </b>
+            <b>CEP: {zipCode}</b>
             <button>QUERO TROCAR!</button>
           </div>
         </div>
