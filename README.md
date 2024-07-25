@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Resumo do projeto
+Leva meu livro é um projeto que consiste em trocar livros por pontos. O objetivo é facilitar a troca de livros entre usuários e, com isso, incentivar o hábito da leitura.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔨 Requisitos funcionais
 
-## Available Scripts
+Cadastro e Gerenciamento de Usuários
 
-In the project directory, you can run:
+1. Registro de Usuário: Os usuários podem criar uma conta fornecendo informações básicas como nome, email e senha.
+Autenticação: Usuários podem se autenticar utilizando email e senha.
+Perfil de Usuário: Usuários podem visualizar e editar suas informações de perfil.
+Cadastro e Gerenciamento de Livros
 
-### `npm start`
+2. Adição de Livros: Usuários podem adicionar livros à sua coleção fornecendo informações como título, autor, e gênero.
+Listagem de Livros: Usuários podem visualizar todos os livros disponíveis para troca.
+Detalhes do Livro: Usuários podem ver detalhes completos sobre cada livro.
+Troca de Livros
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Solicitação de Troca: Usuários podem solicitar a troca de um livro com outro usuário.
+Gerenciamento de Trocas: Usuários podem visualizar o status de suas solicitações de troca e confirmar ou cancelar trocas.
+Histórico de Trocas: Usuários podem visualizar um histórico de todas as trocas realizadas.
+Busca e Filtros
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Busca de Livros: Usuários podem buscar livros por título, autor ou gênero.
+Filtros de Livros: Usuários podem filtrar a listagem de livros com base em critérios como gênero ou autor.
 
-### `npm test`
+## ✔️ Técnicas e tecnologias utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/)
+- [React.js](https://react.dev/)
 
-### `npm run build`
+## 📦 Dependências
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Dependências
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Este projeto utiliza as seguintes dependências:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `axios`
+- `cra-template`
+- `react`
+- `react-dom`
+- `react-icons`
+- `react-router-dom`
+- `react-scripts`
+- `sweetalert2`
+- `sweetalert2-react-content`
 
-### `npm run eject`
+## Dependências de Desenvolvimento
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Estas são as dependências utilizadas apenas durante o desenvolvimento e testes:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `last 1 chrome version`
+- `last 1 firefox version` 
+- `last 1 safari version`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📁 Acesso ao projeto
+Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/JG-OLIVEIRA/levameulivro-frontend/tree/master/src).
